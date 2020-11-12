@@ -1,0 +1,28 @@
+.header
+{
+    &__logo
+    {
+        border:solid black 2px;
+        width:45%;
+        display:block;
+        margin:auto;
+    }
+}
+
+.bannière
+{
+    &__form
+    {
+        border:solid black 2px;
+        display:flex;
+        justify-content:center;
+        &__iconemap
+        {
+            margin-right:20px;
+        }
+        &__lieu
+        {
+            border-style:none;
+        }
+    }
+}

@@ -1,1 +1,26 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+@charset "UTF-8";
+.header__logo {
+  border: solid black 2px;
+  width: 45%;
+  display: block;
+  margin: auto;
+}
+
+.bannière__form {
+  border: solid black 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.bannière__form__iconemap {
+  margin-right: 20px;
+}
+
+.bannière__form__lieu {
+  border-style: none;
+}
+/*# sourceMappingURL=style.css.map */
