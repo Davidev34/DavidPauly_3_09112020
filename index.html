@@ -16,43 +16,56 @@
 				<i class="bannière__form__iconemap fas fa-map-marker-alt"></i>
 				<input class="bannière__form__lieu" type="text" name="lieu" id="pseudo" placeholder="Paris : Belleville"/>
 			</form>
-			<h1>Réservez le menu qui vous convient</h1>
-			<p>Découvrez des restaurants d'exception,sélectionnés par nos soins</p>
-			<div class="bannière__bouton">
-				<p>Explorer nos restaurants</p>
+			<h1 class="bannière__titre">Réservez le menu qui vous convient</h1>
+			<p class="bannière__soustitre">Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
+			<div class="bannière__bouton"><a href="#Restaurants">
+				<p class="bannière__bouton__txt">Explorer nos restaurants</p></a>
 			</div>
 		</section>
 		<section class="fonctionnement">
 			<h2 class="fonctionnement__titre">Fonctionnement</h2>
-			<p class="fonctionnement__pickup">Choisissez un restaurant</p>
-			<p class="fonctionnement__menu">Composez votre menu</p>
-			<p class="fonctionnement__eat">Dégustez au restaurant</p>
+			<p class="fonctionnement__pickup">
+				<span class="fonctionnement__pickup__fctnumber">1</span><i class="fonctionnement__pickup__icon fas fa-mobile-alt"></i><span class="fonctionnement__pickup__txt">Choisissez un restaurant</span></p>
+			<p class="fonctionnement__menu">
+				<span class="fonctionnement__menu__fctnumber">2</span><i class="fonctionnement__menu__icon fas fa-list-ul"></i><span class="fonctionnement__menu__txt">Composez votre menu</span></p>
+			<p class="fonctionnement__eat">
+				<span class="fonctionnement__eat__fctnumber">3</span><i class="fonctionnement__eat__icon fas fa-store"></i><span class="fonctionnement__eat__txt">Dégustez au restaurant</span></p>
 		</section>
-		<section class="restaurant">
+		<section id="Restaurants" class="restaurant">
 			<h2 class="restaurant__titre">Restaurants</h2>
 			<div class="restaurant__palette">
 				<img class="restaurant__palette__img" alt="Photo du restaurant La Palette Du Goût" src="./Ressources/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"/>
-				<p class="restaurant__palette__titre">La Palette Du Goût</p>
-				<p class="restaurant__palette__lieu">Ménilmontant</p>
-				<i class="far fa-heart"></i>
+				<div class="restaurant__palette__txt">
+					<div class="restaurant__palette__txt__nomlieu">
+						<p class="restaurant__palette__txt__nomlieu__titre">La Palette Du Goût</p>
+						<p class="restaurant__palette__txt__nomlieu__lieu">Ménilmontant</p>
+					</div>
+					<i class="restaurant__palette__txt__icon far fa-heart"></i>
+				</div>
 			</div>
 			<div class="restaurant__note">
 				<img class="restaurant__note__img" alt="Photo du restaurant La Note Enchantée" src="./Ressources/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"/>
-				<p class="restaurant__note__titre">La Note Enchantée</p>
-				<p class="restaurant__note__lieu">Charonne</p>
-				<i class="far fa-heart"></i>
+				<div class="restaurant__note__txt">
+					<p class="restaurant__note__txt__titre">La Note Enchantée</p>
+					<p class="restaurant__note__txt__lieu">Charonne</p>
+					<i class="far fa-heart"></i>
+				</div>
 			</div>
 			<div class="restaurant__française">
 				<img class="restaurant__française__img" alt="Photo du restaurant À La Française" src="./Ressources/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"/>
-				<p class="restaurant__française__titre">À La Française</p>
-				<p class="restaurant__française__lieu">Cité Rouge</p>
-				<i class="far fa-heart"></i>
+				<div class="restaurant__française__txt">
+					<p class="restaurant__française__txt__titre">À La Française</p>
+					<p class="restaurant__française__txt__lieu">Cité Rouge</p>
+					<i class="far fa-heart"></i>
+				</div>
 			</div>
 			<div class="restaurant__délice">
 				<img class="restaurant__délice__img" alt="Photo du restaurant Le Délice Des Sens" src="./Ressources/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"/>
-				<p class="restaurant__délice__titre">Le Délice Des Sens</p>
-				<p class="restaurant__délice__lieu">Folie-Méricourt</p>
-				<i class="far fa-heart"></i>
+				<div class="restaurant__délice__txt">
+					<p class="restaurant__délice__txt__titre">Le Délice Des Sens</p>
+					<p class="restaurant__délice__txt__lieu">Folie-Méricourt</p>
+					<i class="far fa-heart"></i>
+				</div>
 			</div>
 		</section>
 		<footer class="footer">

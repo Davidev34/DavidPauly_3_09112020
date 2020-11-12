@@ -1,13 +1,34 @@
 @charset "UTF-8";
+body {
+  margin: 0px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  -webkit-box-shadow: 0px 6px 6px #c5c5c5;
+          box-shadow: 0px 6px 6px #c5c5c5;
+  margin-top: 20px;
+  position: relative;
+  z-index: 1;
+}
+
 .header__logo {
-  border: solid black 2px;
   width: 45%;
   display: block;
   margin: auto;
+  padding-bottom: 15px;
+}
+
+.bannière {
+  background-color: #f6f6f6;
+  padding-bottom: 40px;
 }
 
 .bannière__form {
-  border: solid black 2px;
+  background-color: #eaeaea;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -18,9 +39,192 @@
 
 .bannière__form__iconemap {
   margin-right: 20px;
+  padding-top: 11px;
 }
 
 .bannière__form__lieu {
   border-style: none;
+  background-color: #eaeaea;
+  width: 120px;
+  height: 40px;
+}
+
+.bannière__titre {
+  text-align: center;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+.bannière__soustitre {
+  text-align: center;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.bannière__bouton {
+  margin-left: 80px;
+  margin-right: 80px;
+  margin-top: 30px;
+  text-align: center;
+  background: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(to top, #9356DC, #FF79DA);
+  border-radius: 25px 25px 25px 25px;
+}
+
+.bannière__bouton__txt {
+  padding: 15px;
+  color: #ffffff;
+}
+
+.fonctionnement__titre {
+  margin-left: 15px;
+}
+
+.fonctionnement__pickup {
+  text-align: center;
+  font-weight: bold;
+  background-color: #f6f6f6;
+  margin-left: 15px;
+  margin-right: 15px;
+  padding: 25px;
+  border-radius: 15px 15px 15px 15px;
+  -webkit-box-shadow: 0px 6px 6px #e4e4e4;
+          box-shadow: 0px 6px 6px #e4e4e4;
+}
+
+.fonctionnement__pickup__icon {
+  margin-left: 15px;
+  margin-right: 15px;
+  position: relative;
+  right: 40px;
+}
+
+.fonctionnement__pickup__fctnumber {
+  color: #ffffff;
+  background-color: #9356DC;
+  position: relative;
+  right: 67px;
+  padding: 3px 6px 3px 6px;
+  border-radius: 10px;
+}
+
+.fonctionnement__pickup__txt {
+  position: relative;
+  right: 20px;
+}
+
+.fonctionnement__menu {
+  text-align: center;
+  font-weight: bold;
+  background-color: #f6f6f6;
+  margin-left: 15px;
+  margin-right: 15px;
+  padding: 25px;
+  border-radius: 15px 15px 15px 15px;
+  -webkit-box-shadow: 0px 6px 6px #e4e4e4;
+          box-shadow: 0px 6px 6px #e4e4e4;
+}
+
+.fonctionnement__menu__icon {
+  margin-left: 15px;
+  margin-right: 15px;
+  position: relative;
+  right: 49px;
+}
+
+.fonctionnement__menu__fctnumber {
+  color: #ffffff;
+  background-color: #9356DC;
+  position: relative;
+  right: 71px;
+  padding: 3px 6px 3px 6px;
+  border-radius: 10px;
+}
+
+.fonctionnement__menu__txt {
+  position: relative;
+  right: 24px;
+}
+
+.fonctionnement__eat {
+  text-align: center;
+  font-weight: bold;
+  background-color: #f6f6f6;
+  margin-left: 15px;
+  margin-right: 15px;
+  padding: 25px;
+  border-radius: 15px 15px 15px 15px;
+  -webkit-box-shadow: 0px 6px 6px #e4e4e4;
+          box-shadow: 0px 6px 6px #e4e4e4;
+}
+
+.fonctionnement__eat__icon {
+  margin-left: 15px;
+  margin-right: 15px;
+  position: relative;
+  right: 46px;
+}
+
+.fonctionnement__eat__fctnumber {
+  color: #ffffff;
+  background-color: #9356DC;
+  position: relative;
+  right: 67px;
+  padding: 3px 6px 3px 6px;
+  border-radius: 10px;
+}
+
+.fonctionnement__eat__txt {
+  position: relative;
+  right: 24px;
+}
+
+.restaurant {
+  background-color: #f6f6f6;
+}
+
+.restaurant__titre {
+  margin-left: 15px;
+}
+
+.restaurant__palette {
+  border-radius: 25px 25px 25px 25px;
+  -webkit-box-shadow: 0px 6px 6px #e4e4e4;
+          box-shadow: 0px 6px 6px #e4e4e4;
+  margin: 15px;
+}
+
+.restaurant__palette__img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 25px 25px 0px 0px;
+}
+
+.restaurant__palette__txt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.restaurant__palette__txt__nomlieu {
+  width: 50%;
+  margin: 10px;
+}
+
+.restaurant__palette__txt__nomlieu__titre {
+  font-weight: bold;
+}
+
+.restaurant__palette__txt__icon {
+  font-size: 2em;
+  color: grey;
+  margin: 10px;
 }
 /*# sourceMappingURL=style.css.map */
