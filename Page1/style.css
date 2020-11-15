@@ -68,17 +68,44 @@ footer a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .carte__titre__palette {
   margin-left: 20px;
 }
 
-.carte__titre__icon {
-  margin-right: 30px;
-  margin-top: 25px;
-  margin-bottom: 20px;
-  font-size: 1.5em;
+.carte__titre__icons {
+  padding-right: 10px;
+}
+
+.carte__titre__icons__icon1 {
+  position: absolute;
+  z-index: 1;
+  opacity: 1;
+  -webkit-transition: all 100ms;
+  transition: all 100ms;
+}
+
+.carte__titre__icons__icon1:hover {
+  opacity: 0;
+}
+
+.carte__titre__icons__icon1:hover + .carte__titre__icons__icon2 {
+  opacity: 1;
+}
+
+.carte__titre__icons__icon2 {
+  opacity: 0;
+  background: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(to top, #9356DC, #FF79DA);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
 }
 
 .carte__card__titre {

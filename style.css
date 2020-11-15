@@ -173,6 +173,19 @@ footer a {
   -webkit-box-shadow: 0px 6px 6px #e4e4e4;
           box-shadow: 0px 6px 6px #e4e4e4;
   margin: 15px;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+
+.restaurant__card:hover {
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+  color: #ffffff;
+  background-color: #f6f6f6;
+  -webkit-box-shadow: 6px 6px 6px #d1d1d1;
+          box-shadow: 6px 6px 6px #d1d1d1;
 }
 
 .restaurant__card__img {
@@ -206,10 +219,35 @@ footer a {
   font-weight: bold;
 }
 
-.restaurant__card__txt__icon {
-  font-size: 2em;
-  color: grey;
-  margin: 10px;
+.restaurant__card__txt__icons {
+  padding-right: 10px;
+}
+
+.restaurant__card__txt__icons__icon1 {
+  position: absolute;
+  z-index: 1;
+  opacity: 1;
+  -webkit-transition: all 100ms;
+  transition: all 100ms;
+}
+
+.restaurant__card__txt__icons__icon1:hover {
+  opacity: 0;
+}
+
+.restaurant__card__txt__icons__icon1:hover + .restaurant__card__txt__icons__icon2 {
+  opacity: 1;
+}
+
+.restaurant__card__txt__icons__icon2 {
+  opacity: 0;
+  background: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(to top, #9356DC, #FF79DA);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
 }
 
 .footer {
