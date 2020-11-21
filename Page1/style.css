@@ -1,4 +1,30 @@
 @charset "UTF-8";
+@keyframes fadein {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
 body {
   margin: 0px;
   font-family: 'Roboto', serif;
@@ -61,7 +87,7 @@ footer a {
   z-index: 1;
 }
 
-.carte__titre {
+.carte .titre {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -73,15 +99,16 @@ footer a {
           align-items: center;
 }
 
-.carte__titre__palette {
+.carte .titre .restaurant {
   margin-left: 20px;
+  font-family: 'Shrikhand', cursive;
 }
 
-.carte__titre__icons {
+.carte .titre .icons {
   padding-right: 10px;
 }
 
-.carte__titre__icons__icon1 {
+.carte .titre .icons .icon1 {
   position: absolute;
   z-index: 1;
   opacity: 1;
@@ -89,15 +116,15 @@ footer a {
   transition: all 100ms;
 }
 
-.carte__titre__icons__icon1:hover {
+.carte .titre .icons .icon1:hover {
   opacity: 0;
 }
 
-.carte__titre__icons__icon1:hover + .carte__titre__icons__icon2 {
+.carte .titre .icons .icon1:hover + .icon2 {
   opacity: 1;
 }
 
-.carte__titre__icons__icon2 {
+.carte .titre .icons .icon2 {
   opacity: 0;
   background: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
   background: linear-gradient(to top, #9356DC, #FF79DA);
@@ -108,65 +135,106 @@ footer a {
   transition: all 500ms;
 }
 
-.carte__card__titre {
+.carte .card h2 {
   margin-left: 20px;
 }
 
-.carte__card__tiret {
+.carte .card .tiret {
   margin-left: 20px;
   height: 3px;
   width: 40px;
   background-color: #99E2D0;
 }
 
-.carte__card__suggestion {
+.carte .card .suggestion {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   margin: 10px;
   border-radius: 25px 25px 25px 25px;
   -webkit-box-shadow: 0px 6px 6px #cecece;
           box-shadow: 0px 6px 6px #cecece;
+  overflow: hidden;
+  -webkit-animation: fadein 3s;
+  animation: fadein 3s;
 }
 
-.carte__card__suggestion:hover > .carte__card__suggestion__slide {
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
+.carte .card .suggestion:hover > .prix {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
-.carte__card__suggestion__description {
+.carte .card .suggestion:hover > .slide {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.carte .card .suggestion:hover > .slide > .fa-check-circle {
+  -webkit-transform: rotate(0turn);
+          transform: rotate(0turn);
+}
+
+.carte .card .suggestion .description {
   margin-left: 10px;
-  line-height: 0.9em;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 80%;
 }
 
-.carte__card__suggestion__description__nom {
+.carte .card .suggestion .description .nom {
+  white-space: nowrap;
   font-weight: bold;
-  font-size: 1.1em;
+  width: 220px;
 }
 
-.carte__card__suggestion__prix {
+.carte .card .suggestion .description .style {
+  font-size: 0.9em;
+}
+
+.carte .card .suggestion .prix {
   height: 15px;
-  margin-right: 20px;
   margin-top: 50px;
+  margin-right: 20px;
+  text-align: center;
   vertical-align: baseline;
   font-weight: bold;
+  -webkit-transform: translateX(80px);
+          transform: translateX(80px);
+  -webkit-transition: -webkit-transform 400ms ease-in-out;
+  transition: -webkit-transform 400ms ease-in-out;
+  transition: transform 400ms ease-in-out;
+  transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
 }
 
-.carte__card__suggestion__slide {
+.carte .card .suggestion .slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #99E2D0;
   border-radius: 0px 25px 25px 0px;
-  width: 100px;
-  -webkit-transform-origin: 100% 50%;
-          transform-origin: 100% 50%;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  -webkit-transition: -webkit-transform 800ms;
-  transition: -webkit-transform 800ms;
-  transition: transform 800ms;
-  transition: transform 800ms, -webkit-transform 800ms;
+  width: 110px;
+  -webkit-transform: translateX(110px);
+          transform: translateX(110px);
+  -webkit-transition: -webkit-transform 400ms ease-out;
+  transition: -webkit-transform 400ms ease-out;
+  transition: transform 400ms ease-out;
+  transition: transform 400ms ease-out, -webkit-transform 400ms ease-out;
+}
+
+.carte .card .suggestion .slide .fa-check-circle {
+  color: white;
+  -webkit-transform: rotate(-1turn);
+          transform: rotate(-1turn);
+  -webkit-transition: -webkit-transform 500ms ease-out 100ms;
+  transition: -webkit-transform 500ms ease-out 100ms;
+  transition: transform 500ms ease-out 100ms;
+  transition: transform 500ms ease-out 100ms, -webkit-transform 500ms ease-out 100ms;
 }
 
 .carte__submit {
@@ -272,26 +340,26 @@ footer a {
     -ms-grid-rows: 100px 1fr 140px;
         grid-template-rows: 100px 1fr 140px;
   }
-  .carte__titre {
+  .carte .titre {
     -ms-grid-row: 1;
     grid-row: 1;
     -ms-grid-column: 1;
     -ms-grid-column-span: 3;
     grid-column: 1/span 3;
   }
-  .carte__card:nth-child(2) {
+  .carte .card:nth-child(2) {
     -ms-grid-row: 2;
     grid-row: 2;
     -ms-grid-column: 1;
     grid-column: 1;
   }
-  .carte__card:nth-child(3) {
+  .carte .card:nth-child(3) {
     -ms-grid-row: 2;
     grid-row: 2;
     -ms-grid-column: 2;
     grid-column: 2;
   }
-  .carte__card:nth-child(4) {
+  .carte .card:nth-child(4) {
     -ms-grid-row: 2;
     grid-row: 2;
     -ms-grid-column: 3;

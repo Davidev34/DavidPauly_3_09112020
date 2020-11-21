@@ -1,3 +1,28 @@
+$primaire: #9356DC;
+$secondaire: #FF79DA ;
+$tertiaire: #99E2D0;
+
+@keyframes fadein {
+    from {
+        opacity:0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity:1;
+        transform: translateX(0);
+    }
+}
+@-webkit-keyframes fadein {
+    from {
+        opacity:0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity:1;
+        transform: translateX(0);
+    }
+}
+
 body
 {
     margin:0px;
@@ -55,19 +80,20 @@ footer a
     position:relative;
     bottom:75px;
     z-index:1;
-    &__titre
+    .titre
     {
         display:flex;
         justify-content:space-between;
         align-items:center;
-        &__palette
+        .restaurant
         {
             margin-left:20px;
+            font-family: 'Shrikhand', cursive;
         }
-        &__icons
+        .icons
         {
             padding-right:10px;
-            &__icon1
+            .icon1
             {
                 position:absolute;
                 z-index:1;
@@ -77,15 +103,15 @@ footer a
                 {
                     opacity:0;
                 }
-                &:hover + .carte__titre__icons__icon2
+                &:hover + .icon2
                 {
                     opacity:1;
                 }
             }
-            &__icon2
+            .icon2
             {
                 opacity:0;
-                background: linear-gradient(to top, #9356DC, #FF79DA);
+                background: linear-gradient(to top,$primaire,$secondaire);
                 background-clip: border-box;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color:transparent; 
@@ -93,60 +119,88 @@ footer a
             }
         }
     }
-    &__card
+    .card
     {
-        &__titre
+        h2
         {
             margin-left:20px;
         }
-        &__tiret
+        .tiret
         {
             margin-left:20px;
             height:3px;
             width:40px;
-            background-color:#99E2D0;
+            background-color:$tertiaire;
         }
-        &__suggestion
+        .suggestion
         {
             display:flex;
-            justify-content:space-between;
             margin:10px;
             border-radius:25px 25px 25px 25px;
             box-shadow:0px 6px 6px #cecece;
+            overflow: hidden;
+            -webkit-animation: fadein 3s;
+            animation: fadein 3s;
             &:hover 
             {
-                & > .carte__card__suggestion__slide
+                & >.prix
                 {
-                    transform: scaleX(1);
+                    transform: translateX(0);
+                }
+                & >.slide
+                {
+                    transform: translateX(0);
+                    & >.fa-check-circle
+                    {
+                        transform: rotate(0turn);
+                    }
                 }
             }
-            &__description
+            .description
             {
                 margin-left:10px;
-                line-height:0.9em;
-                
-                &__nom
+                text-overflow: ellipsis;
+                overflow: hidden;
+                width:80%;
+                .nom
                 {
+                    white-space: nowrap;
                     font-weight:bold;
-                    font-size:1.1em;
+                    width:220px;
+                }
+                .style
+                {
+                    font-size:0.9em;
                 }
             }
-            &__prix
+            .prix
             {
                 height:15px;
-                margin-right:20px;
                 margin-top:50px;
+                margin-right:20px;
+                text-align:center;
                 vertical-align:baseline;
                 font-weight:bold;
+                transform: translateX(80px);
+                transition: transform 400ms ease-in-out;
+                
             }
-            &__slide
+            .slide
             {
-                background-color:#99E2D0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color:$tertiaire;
                 border-radius:0px 25px 25px 0px;
-                width:100px;
-                transform-origin: 100% 50%;
-                transform: scaleX(0);
-                transition: transform 800ms;                  
+                width:110px;
+                transform: translateX(110px);
+                transition: transform 400ms ease-out;
+                .fa-check-circle
+                {
+                    color:white;
+                    transform: rotate(-1turn);
+                    transition: transform 500ms ease-out 100ms;
+                }
             }
         }
     }
@@ -155,7 +209,7 @@ footer a
         width:219px;
         margin:60px auto 0px;
         text-align:center;
-        background: linear-gradient(to top, #9356DC, #FF79DA);
+        background: linear-gradient(to top,$primaire,$secondaire);
         border-radius:25px 25px 25px 25px;
         box-shadow:0px 6px 6px #e4e4e4;
         transform:scale(1);
@@ -171,7 +225,6 @@ footer a
             box-shadow:6px 6px 6px #aeaeae;
             background: linear-gradient(to top, #9963db, #ff98e2);
         }
-
     }
 }
 .footer
@@ -196,7 +249,6 @@ footer a
             }
         }
     }
-    
 }
 @media screen and (min-width:768px)
 {
@@ -234,7 +286,6 @@ footer a
                 grid-row:2;
                 grid-column:2/span 1;
             }
-            
         }
     }
 }
@@ -252,22 +303,22 @@ footer a
         display:grid;
         grid-template-columns:1fr 1fr 1fr;
         grid-template-rows:100px 1fr 140px;
-        &__titre
+        .titre
         {
             grid-row:1;
             grid-column:1/span 3;
         }
-        &__card:nth-child(2)
+        .card:nth-child(2)
         {
             grid-row:2;
             grid-column:1;
         }
-        &__card:nth-child(3)
+        .card:nth-child(3)
         {
             grid-row:2;
             grid-column:2;
         }
-        &__card:nth-child(4)
+        .card:nth-child(4)
         {
             grid-row:2;
             grid-column:3;
@@ -311,7 +362,6 @@ footer a
                 grid-row:1;
                 grid-column:4/span 1;
             }
-            
         }
     }
 }
