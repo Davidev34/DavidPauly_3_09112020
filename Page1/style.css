@@ -49,7 +49,7 @@ footer a {
   color: #ffffff;
 }
 
-.header {
+header {
   padding-top: 20px;
   padding-bottom: 15px;
   display: -webkit-box;
@@ -57,13 +57,13 @@ footer a {
   display: flex;
 }
 
-.header__logo {
+header > img {
   width: 45%;
   margin: auto;
 }
 
-.header__arrow {
-  margin-top: 6px;
+header > a {
+  margin: auto 10px;
 }
 
 .bannière {
@@ -72,7 +72,7 @@ footer a {
      object-fit: cover;
 }
 
-.bannière__img {
+.bannière > img {
   width: 100%;
   height: 270px;
   -o-object-fit: cover;
@@ -87,28 +87,27 @@ footer a {
   z-index: 1;
 }
 
-.carte .titre {
+.carte > .titre {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-.carte .titre .restaurant {
+.carte > .titre > h2 {
   margin-left: 20px;
   font-family: 'Shrikhand', cursive;
+  font-size: 1.8em;
 }
 
-.carte .titre .icons {
+.carte > .titre > .icons {
   padding-right: 10px;
+  margin-left: 30px;
 }
 
-.carte .titre .icons .icon1 {
+.carte > .titre > .icons > .far {
   position: absolute;
   z-index: 1;
   opacity: 1;
@@ -116,15 +115,15 @@ footer a {
   transition: all 100ms;
 }
 
-.carte .titre .icons .icon1:hover {
+.carte > .titre > .icons > .far:hover {
   opacity: 0;
 }
 
-.carte .titre .icons .icon1:hover + .icon2 {
+.carte > .titre > .icons > .far:hover + .fas {
   opacity: 1;
 }
 
-.carte .titre .icons .icon2 {
+.carte > .titre > .icons > .fas {
   opacity: 0;
   background: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
   background: linear-gradient(to top, #9356DC, #FF79DA);
@@ -135,18 +134,18 @@ footer a {
   transition: all 500ms;
 }
 
-.carte .card h2 {
+.carte .card > h2 {
   margin-left: 20px;
 }
 
-.carte .card .tiret {
+.carte .card > .tiret {
   margin-left: 20px;
   height: 3px;
   width: 40px;
   background-color: #99E2D0;
 }
 
-.carte .card .suggestion {
+.carte .card > .suggestion {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -159,39 +158,54 @@ footer a {
   animation: fadein 3s;
 }
 
-.carte .card .suggestion:hover > .prix {
+.carte .card > .suggestion:nth-child(1n) {
+  animation-delay: 0.1s;
+  -webkit-animation-delay: 0.1s;
+}
+
+.carte .card > .suggestion:nth-child(2n) {
+  animation-delay: 0.2s;
+  -webkit-animation-delay: 0.2s;
+}
+
+.carte .card > .suggestion:nth-child(3n) {
+  animation-delay: 0.3s;
+  -webkit-animation-delay: 0.3s;
+}
+
+.carte .card > .suggestion:hover > .prix {
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
 
-.carte .card .suggestion:hover > .slide {
+.carte .card > .suggestion:hover > .slide {
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
 
-.carte .card .suggestion:hover > .slide > .fa-check-circle {
+.carte .card > .suggestion:hover > .slide > .fa-check-circle {
   -webkit-transform: rotate(0turn);
           transform: rotate(0turn);
 }
 
-.carte .card .suggestion .description {
+.carte .card > .suggestion > .description {
   margin-left: 10px;
   text-overflow: ellipsis;
   overflow: hidden;
   width: 80%;
 }
 
-.carte .card .suggestion .description .nom {
+.carte .card > .suggestion > .description > .nom {
   white-space: nowrap;
   font-weight: bold;
   width: 220px;
 }
 
-.carte .card .suggestion .description .style {
+.carte .card > .suggestion > .description > .style {
   font-size: 0.9em;
 }
 
-.carte .card .suggestion .prix {
+.carte .card > .suggestion > .prix {
   height: 15px;
   margin-top: 50px;
   margin-right: 20px;
@@ -206,7 +220,7 @@ footer a {
   transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
 }
 
-.carte .card .suggestion .slide {
+.carte .card > .suggestion > .slide {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -227,7 +241,7 @@ footer a {
   transition: transform 400ms ease-out, -webkit-transform 400ms ease-out;
 }
 
-.carte .card .suggestion .slide .fa-check-circle {
+.carte .card > .suggestion > .slide .fa-check-circle {
   color: white;
   -webkit-transform: rotate(-1turn);
           transform: rotate(-1turn);
@@ -266,31 +280,76 @@ footer a {
   background: linear-gradient(to top, #9963db, #ff98e2);
 }
 
-.footer {
+footer {
   background-color: #353535;
   padding: 15px;
   color: #ffffff;
 }
 
-.footer__links {
+footer > div {
   font-size: 0.9em;
   line-height: 0.8;
 }
 
-.footer__links__link__icon1 {
+footer > div > p > .fa-utensils {
   margin-right: 10px;
 }
 
-.footer__links__link__icon2 {
+footer > div > p > .fa-hands-helping {
   margin-right: 10px;
   font-size: 0.6em;
 }
 
-@media screen and (min-width: 768px) {
-  .header__logo {
+@media screen and (min-width: 768px) and (max-width: 1238px) {
+  header > a {
+    margin-left: 20px;
+  }
+  header > img {
     margin: auto;
   }
-  .footer__links {
+  .card {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    -ms-grid-rows: 50px 3px 110px 110px 110px;
+        grid-template-rows: 50px 3px 110px 110px 110px;
+  }
+  .card > h2 {
+    -ms-grid-row: 1;
+    grid-row: 1;
+    -ms-grid-column: 1;
+    grid-column: 1;
+    margin: auto;
+  }
+  .card .tiret:nth-child(2) {
+    -ms-grid-row: 2;
+    grid-row: 2;
+    -ms-grid-column: 1;
+    grid-column: 1;
+  }
+  .card .suggestion:nth-child(3) {
+    -ms-grid-row: 3;
+    grid-row: 3;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    grid-column: 2/span 2;
+  }
+  .card .suggestion:nth-child(4) {
+    -ms-grid-row: 4;
+    grid-row: 4;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    grid-column: 2/span 2;
+  }
+  .card .suggestion:nth-child(5) {
+    -ms-grid-row: 5;
+    grid-row: 5;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    grid-column: 2/span 2;
+  }
+  footer > div {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr;
@@ -298,28 +357,28 @@ footer a {
     -ms-grid-rows: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
   }
-  .footer__links__link:nth-child(1) {
+  footer > div > p:nth-child(1) {
     -ms-grid-row: 1;
     grid-row: 1;
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
     grid-column: 1/span 1;
   }
-  .footer__links__link:nth-child(2) {
+  footer > div > p:nth-child(2) {
     -ms-grid-row: 2;
     grid-row: 2;
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
     grid-column: 1/span 1;
   }
-  .footer__links__link:nth-child(3) {
+  footer > div > p:nth-child(3) {
     -ms-grid-row: 1;
     grid-row: 1;
     -ms-grid-column: 2;
     -ms-grid-column-span: 1;
     grid-column: 2/span 1;
   }
-  .footer__links__link:nth-child(4) {
+  footer > div > p:nth-child(4) {
     -ms-grid-row: 2;
     grid-row: 2;
     -ms-grid-column: 2;
@@ -328,8 +387,11 @@ footer a {
   }
 }
 
-@media screen and (min-width: 1024px) {
-  .header__logo {
+@media screen and (min-width: 1239px) {
+  header > a {
+    margin-left: 20px;
+  }
+  header > img {
     max-width: 500px;
   }
   .carte {
@@ -376,7 +438,7 @@ footer a {
     padding: 0px;
     color: #ffffff;
   }
-  .footer__links {
+  footer > div {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr 1fr 1fr;
@@ -384,28 +446,28 @@ footer a {
     -ms-grid-rows: 1fr;
         grid-template-rows: 1fr;
   }
-  .footer__links__link:nth-child(1) {
+  footer > div > p:nth-child(1) {
     -ms-grid-row: 1;
     grid-row: 1;
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
     grid-column: 1/span 1;
   }
-  .footer__links__link:nth-child(2) {
+  footer > div > p:nth-child(2) {
     -ms-grid-row: 1;
     grid-row: 1;
     -ms-grid-column: 2;
     -ms-grid-column-span: 1;
     grid-column: 2/span 1;
   }
-  .footer__links__link:nth-child(3) {
+  footer > div > p:nth-child(3) {
     -ms-grid-row: 1;
     grid-row: 1;
     -ms-grid-column: 3;
     -ms-grid-column-span: 1;
     grid-column: 3/span 1;
   }
-  .footer__links__link:nth-child(4) {
+  footer > div > p:nth-child(4) {
     -ms-grid-row: 1;
     grid-row: 1;
     -ms-grid-column: 4;
