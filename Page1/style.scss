@@ -2,6 +2,10 @@ $primaire: #9356DC;
 $secondaire: #FF79DA ;
 $tertiaire: #99E2D0;
 
+@mixin marginleft {
+    margin-left:20px;
+}
+
 @keyframes fadein {
     from {
         opacity:0;
@@ -85,7 +89,7 @@ header
         align-items:center;
         >h2
         {
-            margin-left:20px;
+            @include marginleft;
             font-family: 'Shrikhand', cursive;
             font-size:1.6em;
         }
@@ -123,11 +127,11 @@ header
     {
         >h2
         {
-            margin-left:20px;
+            @include marginleft;
         }
         >.tiret
         {
-            margin-left:20px;
+            @include marginleft;
             height:3px;
             width:40px;
             background-color:$tertiaire;
@@ -238,7 +242,7 @@ header
         {
             transform:scale(1.05);	
             box-shadow:6px 6px 6px #aeaeae;
-            background: linear-gradient(to top, #9963db, #ff98e2);
+            background: linear-gradient(to top,lighten($primaire,5%),lighten($secondaire,5%));
         }
     }
 }
@@ -271,7 +275,7 @@ footer
     {
         >a
         {
-            margin-left:20px;
+            @include marginleft;
         }
         >img
         {
@@ -346,7 +350,7 @@ footer
     {
         >a
         {
-            margin-left:20px;
+            @include marginleft;
         }
         >img
         {

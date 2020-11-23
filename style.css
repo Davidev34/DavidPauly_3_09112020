@@ -176,14 +176,12 @@ header > img {
 
 .bannière > h1 {
   text-align: center;
-  margin-left: 60px;
-  margin-right: 60px;
+  margin: 20px 60px;
 }
 
 .bannière > h2 {
   text-align: center;
-  margin-left: 30px;
-  margin-right: 30px;
+  margin: 10px 30px;
   font-size: 1em;
   font-weight: lighter;
 }
@@ -214,8 +212,8 @@ header > img {
           transform: scale(1.05);
   -webkit-box-shadow: 6px 6px 6px #aeaeae;
           box-shadow: 6px 6px 6px #aeaeae;
-  background: -webkit-gradient(linear, left bottom, left top, from(#9963db), to(#ff98e2));
-  background: linear-gradient(to top, #9963db, #ff98e2);
+  background: -webkit-gradient(linear, left bottom, left top, from(#a16be0), to(#ff93e1));
+  background: linear-gradient(to top, #a16be0, #ff93e1);
 }
 
 .fonctionnement {
