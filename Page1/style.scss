@@ -178,14 +178,14 @@ header
             >.description
             {
                 margin-left:10px;
-                text-overflow: ellipsis;
-                overflow: hidden;
                 width:80%;
                 >.nom
                 {
+                    text-overflow: ellipsis;
+                    overflow: hidden;
                     white-space: nowrap;
                     font-weight:bold;
-                    width:220px;
+                    width:235px;
                 }
                 >.style
                 {
@@ -200,7 +200,7 @@ header
                 text-align:center;
                 vertical-align:baseline;
                 font-weight:bold;
-                transform: translateX(80px);
+                transform: translateX(60px);
                 transition: transform 400ms ease-in-out;
                 
             }
@@ -211,7 +211,7 @@ header
                 align-items: center;
                 background-color:$tertiaire;
                 border-radius:0px 25px 25px 0px;
-                width:110px;
+                width:100px;
                 transform: translateX(110px);
                 transition: transform 400ms ease-out;
                 .fa-check-circle

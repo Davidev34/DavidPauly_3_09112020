@@ -190,15 +190,15 @@ header > a {
 
 .carte .card > .suggestion > .description {
   margin-left: 10px;
-  text-overflow: ellipsis;
-  overflow: hidden;
   width: 80%;
 }
 
 .carte .card > .suggestion > .description > .nom {
+  text-overflow: ellipsis;
+  overflow: hidden;
   white-space: nowrap;
   font-weight: bold;
-  width: 220px;
+  width: 235px;
 }
 
 .carte .card > .suggestion > .description > .style {
@@ -212,8 +212,8 @@ header > a {
   text-align: center;
   vertical-align: baseline;
   font-weight: bold;
-  -webkit-transform: translateX(80px);
-          transform: translateX(80px);
+  -webkit-transform: translateX(60px);
+          transform: translateX(60px);
   -webkit-transition: -webkit-transform 400ms ease-in-out;
   transition: -webkit-transform 400ms ease-in-out;
   transition: transform 400ms ease-in-out;
@@ -232,7 +232,7 @@ header > a {
           align-items: center;
   background-color: #99E2D0;
   border-radius: 0px 25px 25px 0px;
-  width: 110px;
+  width: 100px;
   -webkit-transform: translateX(110px);
           transform: translateX(110px);
   -webkit-transition: -webkit-transform 400ms ease-out;
