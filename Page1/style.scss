@@ -163,16 +163,11 @@ header
             }
             &:hover 
             {
-                & >.description
+                cursor:pointer;
+                .description .styleprix .prix
                 {
-                    & >.styleprix
-                    {
-                        & >.prix
-                        {
-                            transform: translateX(-20px);
-                            margin-left:20px;
-                        }
-                    }
+                    transform: translateX(-20px);
+                    margin-left:20px;
                 }
                 & >.slide
                 {
@@ -191,19 +186,18 @@ header
                 width:80%;
                 >.nom
                 {
+                    white-space: nowrap;
                     text-overflow: ellipsis;
                     overflow: hidden;
-                    white-space: nowrap;
                     font-weight:bold;
-                    width:100%;
                 }
                 >.styleprix
                 {
                     display: flex;
+                    justify-content: space-between;
                     margin-bottom:10px;
                     >.style
                     {
-                        width:280px;
                         white-space: nowrap;
                         text-overflow: ellipsis;
                         overflow: hidden;
