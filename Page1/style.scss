@@ -140,7 +140,8 @@ header
         {
             display:flex;
             margin:10px;
-            border-radius:25px 25px 25px 25px;
+            max-width:380px;
+            border-radius:25px;
             box-shadow:0px 6px 6px #cecece;
             overflow: hidden;
             -webkit-animation: fadein 3s;
@@ -162,9 +163,16 @@ header
             }
             &:hover 
             {
-                & >.prix
+                & >.description
                 {
-                    transform: translateX(0);
+                    & >.styleprix
+                    {
+                        & >.prix
+                        {
+                            transform: translateX(-20px);
+                            margin-left:20px;
+                        }
+                    }
                 }
                 & >.slide
                 {
@@ -177,6 +185,8 @@ header
             }
             >.description
             {
+                display:flex;
+                flex-direction:column;
                 margin-left:10px;
                 width:80%;
                 >.nom
@@ -185,24 +195,31 @@ header
                     overflow: hidden;
                     white-space: nowrap;
                     font-weight:bold;
-                    width:235px;
+                    width:100%;
                 }
-                >.style
+                >.styleprix
                 {
-                    font-size:0.9em;
+                    display: flex;
+                    margin-bottom:10px;
+                    >.style
+                    {
+                        width:280px;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        margin:0;
+                        font-size:0.9em;
+                    }
+                    >.prix
+                    {   
+                        height:15px;
+                        margin:0px;
+                        text-align:center;
+                        font-weight:bold;
+                        transform: translateX(50px);
+                        transition: transform 400ms ease-in-out;
+                    }
                 }
-            }
-            >.prix
-            {
-                height:15px;
-                margin-top:50px;
-                margin-right:20px;
-                text-align:center;
-                vertical-align:baseline;
-                font-weight:bold;
-                transform: translateX(60px);
-                transition: transform 400ms ease-in-out;
-                
             }
             >.slide
             {
@@ -229,7 +246,7 @@ header
         margin:60px auto 0px;
         text-align:center;
         background: linear-gradient(to top,$primaire,$secondaire);
-        border-radius:25px 25px 25px 25px;
+        border-radius:25px;
         box-shadow:0px 6px 6px #e4e4e4;
         transform:scale(1);
         transition:all 300ms;
