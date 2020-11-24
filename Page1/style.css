@@ -221,6 +221,7 @@ header > a {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 10px;
+  width: 290px;
 }
 
 .carte .card > .suggestion > .description > .styleprix > .style {
@@ -232,6 +233,7 @@ header > a {
 }
 
 .carte .card > .suggestion > .description > .styleprix > .prix {
+  width: 30px;
   height: 15px;
   margin: 0px;
   text-align: center;

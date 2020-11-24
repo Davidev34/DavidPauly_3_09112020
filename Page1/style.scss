@@ -196,6 +196,7 @@ header
                     display: flex;
                     justify-content: space-between;
                     margin-bottom:10px;
+                    width:290px;
                     >.style
                     {
                         white-space: nowrap;
@@ -206,6 +207,7 @@ header
                     }
                     >.prix
                     {   
+                        width:30px;
                         height:15px;
                         margin:0px;
                         text-align:center;
