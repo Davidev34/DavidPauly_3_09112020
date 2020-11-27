@@ -2,8 +2,9 @@ $primaire: #9356DC;
 $secondaire: #FF79DA ;
 $tertiaire: #99E2D0;
 
-@mixin marginleft {
+@mixin margins {
     margin-left:20px;
+    margin-bottom:5px;
 }
 
 @keyframes fadein {
@@ -78,7 +79,7 @@ header
 }
 .carte
 {
-    background-color:#f6f6f6;
+    background-color:#f0f0f0;
     border-radius:25px 25px 0px 0px;
     position:relative;
     bottom:75px;
@@ -89,7 +90,7 @@ header
         align-items:center;
         >h2
         {
-            @include marginleft;
+            @include margins;
             font-family: 'Shrikhand', cursive;
             font-size:1.6em;
         }
@@ -125,13 +126,14 @@ header
     }
     .card
     {
+        margin-top:40px;
         >h2
         {
-            @include marginleft;
+            @include margins;
         }
         >.tiret
         {
-            @include marginleft;
+            @include margins;
             height:3px;
             width:40px;
             background-color:$tertiaire;
@@ -141,6 +143,7 @@ header
             display:flex;
             margin:10px;
             max-width:380px;
+            background-color: white;
             border-radius:25px;
             box-shadow:0px 6px 6px #cecece;
             overflow: hidden;
@@ -288,7 +291,7 @@ footer
     {
         >a
         {
-            @include marginleft;
+            @include margins;
         }
         >img
         {
@@ -363,7 +366,7 @@ footer
     {
         >a
         {
-            @include marginleft;
+            @include margins;
         }
         >img
         {
